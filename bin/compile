@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-%x(source compile_java)
+%x(source #{File.dirname(__FILE__).join("compile_java")})
 
 # sync output
 $stdout.sync = true
