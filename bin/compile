@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+%x(source compile_java)
+
 # sync output
 $stdout.sync = true
 
