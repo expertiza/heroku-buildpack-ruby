@@ -87,7 +87,7 @@ class LanguagePack::Helpers::BundlerWrapper
       output  = run_stdout(command, user_env: true, env: env)
       raise GemfileParseError.new(run(command, user_env: true, env: env)) unless $?.success?
       if output.match(/No ruby version specified/)
-        "2.1.5"
+        "ruby 2.1.5"
       else
         output.chomp.sub('(', '').sub(')', '').sub("p", " p").split.join('-')
       end
