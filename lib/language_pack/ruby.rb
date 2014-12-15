@@ -332,6 +332,8 @@ ERROR
         topic "Installing JVM: #{jvm_version}"
 
         FileUtils.mkdir_p(slug_vendor_jvm)
+        ENV['JAVA_HOME'] = File.expand_path slug_vendor_jvm
+        Kernel.puts "JAVA_HOME set to #{ENV['JAVA_HOME']}"
         Dir.chdir(slug_vendor_jvm) do
           @fetchers[:jvm].fetch_untar("#{jvm_version}.tar.gz")
         end
