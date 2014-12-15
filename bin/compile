@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
-%x(source #{File.dirname(__FILE__).join("compile_java")})
+require 'pathname'
+
+%x(source #{Pathname.new(File.dirname(__FILE__)).join("compile_java")} #{ARGV[0]} #{ARGV[1]} #{ARGV[2]})
 
 # sync output
 $stdout.sync = true
