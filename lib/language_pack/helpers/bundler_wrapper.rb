@@ -32,7 +32,6 @@ class LanguagePack::Helpers::BundlerWrapper
     fetch_bundler
     $LOAD_PATH << @path
     require "bundler"
-    Kernel.puts "JAVA_HOME set to #{ENV['JAVA_HOME']}"
     self
   end
 
