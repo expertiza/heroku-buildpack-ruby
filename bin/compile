@@ -2,8 +2,6 @@
 
 require 'pathname'
 
-%x(#{Pathname.new(File.dirname(__FILE__)).join("compile_java")} #{ARGV[0]} #{ARGV[1]} #{ARGV[2]})
-
 # sync output
 $stdout.sync = true
 
